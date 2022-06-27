@@ -1,8 +1,8 @@
 //CLICAR NA IMAGEM E ABRIR O CONTEÚDO CORRESPONDENTE AQUELA IMAGEM
 
 function initTabNav() {
-  const tabMenu = document.querySelectorAll('.js-tabmenu li')
-  const tabContent = document.querySelectorAll('.js-tabcontent section');
+  const tabMenu = document.querySelectorAll('[data-tab ="menu"] li')
+  const tabContent = document.querySelectorAll('[data-tab ="content"] section');
 
   if(tabMenu.length && tabContent.length) {
     tabContent[0].classList.add('ativo');
@@ -11,7 +11,8 @@ function initTabNav() {
       tabContent.forEach((section) => {
         section.classList.remove('ativo');
       });
-      tabContent[index].classList.add('ativo');
+      var direcao = tabContent[index].dataset.anime;
+      tabContent[index].classList.add('ativo', direcao);
     }
 
     tabMenu.forEach((itemMenu, index) => {
@@ -27,7 +28,7 @@ initTabNav();
 
 // CLICAR NO FAQ E ABRIR AS RESPOSTAS QUANDO CLICADO
 function initAccordion() {
-  const accordionList = document.querySelectorAll('.js-accordion dt');
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
   const activeClass = 'ativo';
   
   if(accordionList.length) {
@@ -52,7 +53,7 @@ initAccordion();
 
 //CLICAR NO MENU E SER LEVADO PARA A PARTE QUE FOI CLICADO
 function initScrollSuave() {
-  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
   function scrollToSection(event) {
     event.preventDefault();
@@ -81,7 +82,7 @@ initScrollSuave();
 //ROLAR A PÁGINA E ANIMAR OS CONTEÚDOS, VAI ENTRANDO SUAVEMENTE NA TELA
 
 function initAnimacaoScroll() {
-  const sections = document.querySelectorAll('.js-scroll');
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
   if(sections.length) {
     const windowMetade = window.innerHeight * 0.6;
 
