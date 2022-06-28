@@ -53,9 +53,9 @@
     right: -30px;
     position: absolute;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0,.3);
-    background: #E54;
+    background:  rgb(85, 255, 85);
     font-size: 1rem;
-    color: white;
+    color: #222;
     cursor: pointer;
     
 }
@@ -77,12 +77,12 @@
 
 .modal button[type="submit"] {
     display: block;
-    background:#E54;
+    background: rgb(85, 255, 85);
     border: none;
     border-radius: 4px;
     padding: .7rem 2rem ;
     font-size: 1rem;
-    color: white;
+    color: #222;
     font-family: 'IBM Plex Mono', monospace;
     margin-top: 1rem;
 }
