@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&family=Playfair+Display+SC&display=swap" rel="stylesheet">
     <script>document.documentElement.className += ' js';</script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Animais Fantásticos</title>
 </head>
 
 <body>
+    <div class="grid-container">
     <nav class= "menu" data-menu="suave">
         <ul >
             <li><a href="#animais">Animais</a></li>
             <li><a href="#faq">Faq</a></li>
             <li><a href="#contato">Contato</a></li>
-            <li><a href="https://www.origamid.com/">Dev →</a></li>
+            <li><a data-modal="abrir" href="login.html">Login →</a></li>
         </ul>
     </nav>
     <section class="grid-section animais" data-anime="scroll" id="animais">
@@ -129,8 +130,24 @@
     <footer class="copy">
         <p>Aprendendo a programar</p>
     </footer>
+</div>
 
-   <script src="ambiente.js"></script>
+
+ <!---MODAL-->
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+            <label for="email">Email</label>
+            <input type="text" for="email" id="email">
+            <label for="senha">Senha</label>
+            <input type="password" for="senha" id="senha">
+            <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+
+   <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
